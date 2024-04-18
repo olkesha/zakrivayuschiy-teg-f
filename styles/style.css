@@ -35,6 +35,26 @@ html {
 
 
 /* components */
+.button {
+  position: relative;
+  padding: 9px 17px;
+  border: 2px solid var(--main-color);
+  transition: box-shadow var(--short-tr);
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 2px 2px 0 var(--main-color);
+  }
+}
+
 .button__text {
   position: relative;
   z-index: 10;
@@ -52,13 +72,13 @@ html {
   position: absolute;
   inset: 0;
   transform-origin: left;
-  scale: 0 1;
+  transform: scale(0, 1);
   background-color: var(--main-color);
-  transition: scale var(--long-tr) ease-in-out;
+  transition: transform var(--long-tr) ease-in-out;
 }
 
 .button:hover::before {
-  scale: 1 1;
+  transform: scale(1, 1);
 }
 
 .diskette-icon {
@@ -68,7 +88,7 @@ html {
 
 .dot {
   letter-spacing: -2px;
-  animation: dots 1.5s linear infinite;
+  animation: loadingEffect 1.5s linear infinite;
 
   &.dot-1 {
     animation-delay: 0s;
@@ -99,14 +119,23 @@ html {
   background-color: var(--bg-color);
 }
 
-.header__title {
+.header__logo {
+  display: block;
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   line-height: 1;
   text-transform: uppercase;
   margin-block-end: 21px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--main-color);
+  }
 }
 
-.header__subtitle {
+.header__title {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   line-height: 1;
   text-transform: uppercase;
@@ -155,7 +184,7 @@ html {
   top: 0;
   left: -20px;
   content: '▶';
-  animation: marker var(--long-tr) ease-in-out infinite alternate;
+  animation: slideInFromLeft var(--long-tr) ease-in-out infinite alternate;
 }
 
 .theme-menu__button:enabled {
@@ -174,13 +203,13 @@ html {
   inset-inline: 0;
   height: 2px;
   transform-origin: left;
-  scale: 0 1;
+  transform: scale(0, 1);
   background-color: currentColor;
-  transition: scale var(--short-tr);
+  transition: transform var(--short-tr);
 }
 
 .theme-menu__button:enabled:focus-visible::after {
-  scale: 1 1;
+  transform: scale(1, 1);
 }
 
 
@@ -194,6 +223,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-block-end: 50px;
 }
 
 .main__item {
@@ -221,34 +251,34 @@ html {
   object-fit: cover;
   object-position: 95%;
 
-  &.card__image-first {
+  &.card__image-filterGrayscale {
     filter: grayscale(100%);
   }
 
-  &.card__image-second {
+  &.card__image-filterBrightness {
     filter: brightness(25%);
   }
 
-  &.card__image-third {
+  &.card__image-filterInvert {
     filter: invert(1);
     animation: invertImage 5s linear infinite alternate;
   }
 
-  &.card__image-fourth {
+  &.card__image-filterSepia {
     filter: sepia(65%);
   }
 
-  &.card__image-fifth {
+  &.card__image-multiFilter {
     filter: saturate(200%) opacity(.7);
     rotate: 45deg;
     scale: 1.5;
   }
 
-  &.card__image-sixth {
+  &.card__image-filterBlur {
     animation: blurImage 4s ease-out infinite;
   }
 
-  &.card__image-seventh {
+  &.card__image-filterContrast {
     filter: contrast(200%);
   }
 }
@@ -297,25 +327,7 @@ html {
 }
 
 .card__like-button {
-  position: relative;
   min-inline-size: 130px;
-  padding: 9px 17px;
-  border: 2px solid var(--main-color);
-
-  transition: box-shadow var(--short-tr);
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: none;
-    box-shadow: 2px 2px 0 var(--main-color);
-  }
 }
 
 
@@ -363,77 +375,14 @@ html {
   opacity: 0;
 }
 
-.card__icon-button:hover .core {
-  opacity: 1; /* почему-то fill при состояние :hover не работал плавно, поэтому сделал через opacity */
-  transition-delay: 0s;
-}
-
-.card__icon-button:hover .main-body {
-  opacity: 1;
-  transition-delay: .05s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--heart-accent-color);
-  transition-delay: 0s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-accent-color);
-  transition-delay: .05s;
-}
-
-.like-icon.is-liked .heart {
-  animation: scaleHeart var(--short-tr) ease-in alternate;
-  animation-delay: .1s;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks var(--short-tr) ease-in alternate;
-  animation-delay: var(--short-tr);
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-accent-color);
-  transition-delay: .06s;
-}
-
-.like-icon.is-liked .main-body {
-  opacity: 1;
-  fill: var(--heart-accent-color);
-  transition-delay: .05s;
-}
-
-.like-icon.is-liked .core {
-  opacity: 1;
-  fill: var(--heart-accent-color);
-  transition-delay: 0s;
-}
-
 .popup-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  position: relative;
   margin: 0 auto;
   padding: 15px 20px;
-  border: 2px solid var(--main-color);
 
   background-color: var(--bg-color);
-  transition: box-shadow var(--short-tr);
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: none;
-    box-shadow: 2px 2px 0 var(--main-color);
-  }
 }
 
 .popup-btn > .diskette-icon {
@@ -482,29 +431,8 @@ html {
 }
 
 .dialog__button {
-  border: 2px solid var(--main-color);
-  padding: 9px 17px;
   width: 100%;
-
-  font-family: 'PressStart2P';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 90%;
   text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: none;
-    box-shadow: 2px 2px 0 var(--main-color);
-  }
 }
 
 
@@ -513,6 +441,11 @@ html {
 @media screen and (0 < width <= 375px) {
   .popup-btn {
     flex-direction: column;
+  }
+
+  .popup-btn > .diskette-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -527,12 +460,12 @@ html {
   }
 }
 
-@supports ((font-variation-settings: normal) and (text-stroke: .5px var(--bg-color))) {
+@supports ((font-variation-settings: normal) and (-webkit-text-stroke: .5px var(--bg-color))) {
   .page {
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
   }
 
   .card__watermark {
-    text-stroke: .5px var(--bg-color);
+    -webkit-text-stroke: .5px var(--bg-color);
   }
 }

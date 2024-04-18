@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Закрывающий тег</title>
 
@@ -10,18 +10,18 @@
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./svg/favicon.svg">
 
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/themes.css">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">&lt;/html&gt;</h1>
-      <p class="header__subtitle">закрывающий тег</p>
+      <a href="#" class="header__logo">&lt;/html&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
@@ -53,7 +53,7 @@
           <article class="card">
             <h2 class="card__title">Фритрек и нулевой спринт: Пора браться за ум</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-first">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterGrayscale" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/каждый&gt;</span>
             </div>
             <div class="card__content">
@@ -62,7 +62,7 @@
                 <p class="card__desc">В начале 2024 года я наконец понял, что вот уже 2 года просто валяю дурака и ничем не занимаюсь. В голову пришло пару мыслей по поводу того, чем бы мне заняться. Перевес между какой-то работой (которая не даст никакого развития) и курсами по программированию был существенным и я выбрал второе, так как, связывая работу с IT, ты никогда не останешься безработным (ну, по крайней мере, я так считаю).</p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -72,7 +72,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -83,7 +83,7 @@
           <article class="card">
             <h2 class="card__title">1 спринт: Вспоминаем все то, что знали 5 лет назад</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-second">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterBrightness" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/охотник&gt;</span>
             </div>
             <div class="card__content">
@@ -92,7 +92,7 @@
                 <p class="card__desc">Заголовок такой, потому что я уже начинал заниматься версткой в 2019 году, но то ли выгорел, то ли просто потерял интерес - молодой был и глупый. Сейчас уже более основательно подошел к вебу, ибо мне это действительно нравится!</p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -102,7 +102,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -113,7 +113,7 @@
           <article class="card">
             <h2 class="card__title">1 спринт: А если не получится?.. значит крипта</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-third">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterInvert" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/желает&gt;</span>
             </div>
             <div class="card__content">
@@ -122,7 +122,7 @@
                 <p class="card__desc">Ну вот честно. Я уже сам стал частью дива. Я ложусь и просыпаюсь с мыслями: «так.. этот див в этом, этот тут - значит тот нормально встанет»</p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -132,7 +132,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -143,7 +143,7 @@
           <article class="card">
             <h2 class="card__title">2 спринт: Ну вроде пока все хорошо</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-fourth">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterSepia" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/знать&gt;</span>
             </div>
             <div class="card__content">
@@ -156,7 +156,7 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -166,7 +166,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -177,7 +177,7 @@
           <article class="card">
             <h2 class="card__title">2 спринт: Мне кажется или меня реально затягивает?</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-fifth">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-multiFilter" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/где&gt;</span>
             </div>
             <div class="card__content">
@@ -190,7 +190,7 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -200,7 +200,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -211,7 +211,7 @@
           <article class="card">
             <h2 class="card__title">3 спринт: Какой-то странный макет...</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-sixth">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterBlur" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/сидит&gt;</span>
             </div>
             <div class="card__content">
@@ -224,7 +224,7 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -234,7 +234,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -245,7 +245,7 @@
           <article class="card">
             <h2 class="card__title">3 спринт: А че и софты тоже читать надо?! &#9785;&#9785;&#9785;</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-seventh">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image card__image-filterContrast" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/фазан&gt;</span>
             </div>
             <div class="card__content">
@@ -258,7 +258,7 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -268,7 +268,7 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -279,7 +279,7 @@
           <article class="card">
             <h2 class="card__title">«Сейчас я здесь, а хочется быть там»</h2>
             <div class="card__gallery">
-              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image">
+              <img srcset="./images/image.webp" src="./images/image.png" alt="Картинка, описывающая статью" class="card__image" loading="lazy">
               <span class="card__watermark" aria-hidden="true">&lt;/!!!&gt;</span>
             </div>
             <div class="card__content">
@@ -292,7 +292,7 @@
                 </p>
               </div>
               <div class="card__buttons">
-                <button class="card__icon-button">
+                <button type="button" class="card__icon-button">
                   <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="39" height="36" viewBox="0 0 39 36">
                     <g class="heart">
                       <path class="contour" fill="var(--main-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -302,21 +302,20 @@
                     </g>
                   </svg>
                 </button>
-                <button class="button card__like-button">
+                <button type="button" class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
             </div>
           </article>
         </li>
-
-        <button class="button popup-btn" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
-          <svg class="diskette-icon">
-            <use href="./svg/icons.svg#diskette"></use>
-          </svg>
-          <span class="button__text">Сохранить на память</span>
-        </button>
       </ul>
+      <button class="button popup-btn" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+        <svg class="diskette-icon">
+          <use href="./svg/icons.svg#diskette"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
     </main>
 
     <dialog id="dialog-id" class="dialog">
@@ -326,7 +325,7 @@
         </svg>
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button class="dialog__button" type="button" onclick="window['dialog-id'].close()">ок</button>
+      <button class="button dialog__button" type="button" onclick="window['dialog-id'].close()"><span class="button__text">ок</span></button>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
